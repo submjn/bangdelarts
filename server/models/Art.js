@@ -10,6 +10,7 @@ var ArtSchema = new mongoose.Schema({
   sub_category: String,
   owner_collection: String,
   published_year: { type: Number, min: 1935, max: 2019 },
+  date: Date,
   publisher: String,
   remarks: String,
   deven_img: Number,
