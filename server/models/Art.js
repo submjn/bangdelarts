@@ -15,7 +15,10 @@ var ArtSchema = new mongoose.Schema({
   remarks: String,
   deven_img: Number,
   kabindra_sn: Number,
-  kabindra_dsc: Number
+  kabindra_dsc: Number,
+  offset: Number, 
+  limit: Number,
+  title: String
 });
 
 module.exports = mongoose.model('Art', ArtSchema);

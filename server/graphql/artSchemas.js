@@ -5,6 +5,7 @@ var GraphQLObjectType = require('graphql').GraphQLObjectType;
 var GraphQLNonNull = require('graphql').GraphQLNonNull;
 var GraphQLID = require('graphql').GraphQLID;
 var GraphQLString = require('graphql').GraphQLString;
+var GraphQLFloat = require('graphql').GraphQLFloat;
 var GraphQLInt = require('graphql').GraphQLInt;
 var GraphQLDate = require('graphql-date');
 var ArtModel = require('../models/Art');
@@ -20,10 +21,10 @@ var artType = new GraphQLObjectType({
                 type: GraphQLString
             },
             height: {
-                type: GraphQLInt
+                type: GraphQLFloat
             },
             width: {
-                type: GraphQLInt
+                type: GraphQLFloat
             },
             medium: {
                 type: GraphQLString
@@ -107,10 +108,10 @@ var mutation = new GraphQLObjectType({
                 type: new GraphQLNonNull(GraphQLString)
             },
             height: {
-                type: new GraphQLNonNull(GraphQLInt)
+                type: new GraphQLNonNull(GraphQLFloat)
             },
             width: {
-                type: new GraphQLNonNull(GraphQLInt)
+                type: new GraphQLNonNull(GraphQLFloat)
             },
             medium: {
                 type: new GraphQLNonNull(GraphQLString)
@@ -166,10 +167,10 @@ var mutation = new GraphQLObjectType({
                 type: new GraphQLNonNull(GraphQLString)
             },
             height: {
-                type: new GraphQLNonNull(GraphQLInt)
+                type: new GraphQLNonNull(GraphQLFloat)
             },
             width: {
-                type: new GraphQLNonNull(GraphQLInt)
+                type: new GraphQLNonNull(GraphQLFloat)
             },
             medium: {
                 type: new GraphQLNonNull(GraphQLString)
@@ -226,7 +227,7 @@ var mutation = new GraphQLObjectType({
             });
           }
         },
-        removeBook: {
+        removeArt: {
           type: artType,
           args: {
             id: {
